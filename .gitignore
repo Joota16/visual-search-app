@@ -1,0 +1,48 @@
+# Entorno virtual
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Configuración privada
+.env
+
+# Dataset y archivos generados
+data/cache/
+data/images/
+data/thumbnails/
+
+# Manifiestos generados
+data/manifests/*
+!data/manifests/.gitkeep
+!data/manifests/dataset_report.json
+
+# Qdrant
+qdrant_storage/
+
+# Archivos temporales
+*.part
+*.tmp
+*.log
+
+# Modelos
+*.pt
+*.pth
+*.onnx
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Editores
+.idea/
+.vscode/settings.json
+
+# Embeddings generados
+data/embeddings/
+*.npy

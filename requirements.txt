@@ -1,0 +1,33 @@
+# Dataset
+datasets
+
+# Modelo multimodal
+open_clip_torch
+
+# Base de datos vectorial
+qdrant-client
+
+# API
+fastapi
+uvicorn[standard]
+python-multipart
+orjson
+
+# Configuración
+pydantic-settings
+python-dotenv
+
+# Interfaz
+streamlit
+httpx
+
+# Procesamiento
+Pillow
+numpy
+pandas
+tqdm
+
+# Calidad y pruebas
+pytest
+pytest-cov
+ruff
