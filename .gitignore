@@ -42,3 +42,7 @@ Thumbs.db
 # Editores
 .idea/
 .vscode/settings.json
+
+# Embeddings generados
+data/embeddings/
+*.npy
