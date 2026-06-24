@@ -162,9 +162,23 @@ def render_result_card(
     result: dict[str, Any],
 ) -> None:
     """Muestra una imagen recuperada y sus metadatos."""
+    dataset_id = result.get("dataset_id", "")
+
+    image_url = result["thumbnail_url"]
+    image_width: int | str = "stretch"
+
+    if dataset_id == "tiny_imagenet":
+        image_url = result["image_url"]
+
+        original_width = int(
+            result.get("width") or 64
+        )
+
+        image_width = original_width
+
     st.image(
-        result["thumbnail_url"],
-        width="stretch",
+        image_url,
+        width=image_width,
     )
 
     st.markdown(
@@ -172,17 +186,34 @@ def render_result_card(
         f"{format_label(result['label'])}**"
     )
 
+    dataset_name = (
+        result.get("dataset_name")
+        or result.get("dataset_id")
+        or "Dataset desconocido"
+    )
+
+    domain = result.get("domain") or "sin dominio"
+
     st.caption(
         f"Similitud: {result['score']:.4f} · "
-        f"Split: {result['split']}"
+        f"Dataset: {dataset_name} · "
+        f"Dominio: {domain}"
     )
+
+    if dataset_id == "tiny_imagenet":
+        width = result.get("width")
+        height = result.get("height")
+
+        if width and height:
+            st.caption(
+                f"Resolución original: {width}x{height}"
+            )
 
     st.link_button(
         "Ver imagen original",
         result["image_url"],
         width="stretch",
     )
-
 
 def render_results(
     response: dict[str, Any] | None,

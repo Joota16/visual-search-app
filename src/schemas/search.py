@@ -29,10 +29,22 @@ class SearchResult(BaseModel):
     position: int
     point_id: str
     score: float
+
     label: str
+    raw_label: str | None = None
+
     label_id: int
     split: str
     row_index: int
+
+    dataset_id: str | None = None
+    dataset_name: str | None = None
+    domain: str | None = None
+    source_dataset: str | None = None
+
+    width: int | None = None
+    height: int | None = None
+
     image_url: str
     thumbnail_url: str
 

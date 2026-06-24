@@ -1,7 +1,36 @@
-# Visual Search App — Búsqueda multimodal de imágenes
+# Visual Search App
 
-Sistema de búsqueda multimodal que permite recuperar imágenes mediante texto o una imagen de referencia.
-El proyecto usa el dataset **Caltech-256**, genera embeddings visuales con **CLIP ViT-B/32**, procesa consultas textuales con un modelo **CLIP multilingüe** y almacena los vectores en **Qdrant** para búsqueda por similitud.
+Sistema de búsqueda multimodal de imágenes que permite recuperar resultados usando texto o una imagen de referencia.
+
+El proyecto implementa una arquitectura **multi-dataset**, usa embeddings de imágenes con **CLIP ViT-B/32**, consultas textuales multilingües con **SentenceTransformers**, búsqueda vectorial con **Qdrant**, backend con **FastAPI** y frontend con **Streamlit**.
+
+---
+
+## Resumen del proyecto
+
+La aplicación permite realizar dos tipos de búsqueda:
+
+```text
+Texto → imagen
+Imagen → imagen
+```
+
+La versión final trabaja con un índice multi-dataset de aproximadamente **95,607 imágenes**.
+
+| Dataset                |               Dominio | Cantidad usada |
+| ---------------------- | --------------------: | -------------: |
+| Caltech-256            |     Objetos generales |         30,607 |
+| Food-101               |                Comida |         20,000 |
+| Fashion Product Images | Productos / ecommerce |         25,000 |
+| Tiny ImageNet          |  Escalabilidad visual |         20,000 |
+
+Total indexado:
+
+```text
+95,607 imágenes
+```
+
+---
 
 ## Arquitectura general
 
@@ -24,51 +53,62 @@ EmbeddingService
 Qdrant
   |
   v
-Resultados visuales de Caltech-256
+Resultados visuales multi-dataset
 ```
 
-## Tecnologías principales
+---
+
+## Tecnologías utilizadas
 
 * Python
 * FastAPI
 * Streamlit
 * Qdrant
 * SentenceTransformers
-* CLIP ViT-B/32
 * PyTorch
 * Hugging Face Datasets
-* Caltech-256
+* CLIP ViT-B/32
+* NLTK / WordNet
+* Docker
 
-## Dataset y modelo
+---
 
-El dataset utilizado es:
+## Modelos utilizados
+
+Modelo visual:
 
 ```text
-ilee0022/Caltech-256
+clip-ViT-B-32
 ```
 
-El modelo de texto:
+Modelo textual multilingüe:
 
 ```text
 sentence-transformers/clip-ViT-B-32-multilingual-v1
 ```
 
-Este modelo permite transformar consultas en español, inglés u otros idiomas en embeddings compatibles con los embeddings visuales de las imágenes.
+Es el modelo que convierte consultas textuales en español, inglés u otros idiomas en embeddings compatibles con los embeddings visuales de las imágenes.
 
 Ejemplos de consultas válidas:
 
 ```text
+pizza
+hamburguesa
+zapatos
+camiseta
+perro
 avión
-airplane
-una foto de una motocicleta
-a photo of a motorcycle
 mariposa
-butterfly
+dog
+camera
+a photo of a motorcycle
 ```
 
-## Configuración del entorno
+---
 
-Crear y activar entorno virtual:
+## Configuración inicial
+
+Crear el entorno virtual:
 
 ```powershell
 python -m venv ..\venv
@@ -81,15 +121,23 @@ Instalar dependencias:
 pip install -r requirements.txt
 ```
 
-Copiar archivo de variables de entorno:
+Descargar WordNet para mostrar nombres legibles en Tiny ImageNet:
+
+```powershell
+python -c "import nltk; nltk.download('wordnet')"
+```
+
+Copiar el archivo de variables de entorno:
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
+---
+
 ## Levantar Qdrant
 
-Antes de indexar o buscar imágenes, Qdrant debe estar activo:
+Ejecutar:
 
 ```powershell
 docker compose up -d
@@ -101,150 +149,126 @@ Verificar que Qdrant responde:
 Invoke-RestMethod http://localhost:6333/collections
 ```
 
-Para detener Qdrant:
+Para ver los nombres de las colecciones:
 
 ```powershell
-docker compose down
+(Invoke-RestMethod http://localhost:6333/collections).result.collections.name
 ```
+
+---
 
 ## Flujo completo de ejecución de scripts
 
-### 1. Inspeccionar el dataset
+---
+
+### 1. Exportar imágenes, miniaturas y manifiesto multi-dataset
 
 ```powershell
-python -m scripts.inspect_dataset
+python -m scripts.export_multidataset
 ```
 
-Este script descarga o reutiliza el dataset desde Hugging Face, revisa su estructura, valida columnas esperadas y genera un reporte del dataset.
+Este script descarga o reutiliza los datasets, exporta las imágenes originales, genera miniaturas y construye un manifiesto unificado.
 
-Salidas principales:
+Salida principal:
 
 ```text
-data/manifests/dataset_report.json
-data/manifests/samples/
+data/manifests/visual_search_multidataset_manifest.csv
 ```
 
-### 2. Exportar imágenes, miniaturas y manifiesto
-
-```powershell
-python -m scripts.export_dataset
-```
-
-Este script exporta las imágenes originales, genera miniaturas y construye el manifiesto principal del dataset.
-
-Salidas principales:
+Resultado esperado:
 
 ```text
-data/images/
-data/thumbnails/
-data/manifests/caltech256_manifest.csv
-data/manifests/caltech256_export_progress.jsonl
+Procesadas en esta ejecución: 95,607
+Registros totales en manifiesto: 95,607
+EXPORTACIÓN MULTI-DATASET COMPLETADA
 ```
 
-### 3. Verificar la exportación
+---
 
-```powershell
-python -m scripts.verify_export
-```
-
-Este script valida que las imágenes, miniaturas, rutas, tamaños, identificadores y manifiestos estén correctos.
-
-Verifica principalmente:
-
-```text
-data/images/
-data/thumbnails/
-data/manifests/caltech256_manifest.csv
-```
-
-### 4. Generar embeddings de imágenes
+### 2. Generar embeddings de imágenes
 
 ```powershell
 python -m scripts.generate_embeddings
 ```
 
-Este script carga las imágenes del manifiesto y genera embeddings visuales de dimensión 512 usando `clip-ViT-B-32`.
+Este script genera embeddings visuales para todas las imágenes del manifiesto multi-dataset usando `clip-ViT-B-32`.
 
 Salida principal:
 
 ```text
-data/embeddings/caltech256_multilingual_clip_vit_b32.npy
+data/embeddings/visual_search_multidataset_clip_vit_b32.npy
 ```
 
-También genera reportes de progreso:
+Resultado esperado:
 
 ```text
-data/manifests/embedding_progress_multilingual.json
-data/manifests/embedding_report_multilingual.json
+Forma: (95,607, 512)
+Tipo: float32
+Normas: 1.000000 – 1.000000
+EMBEDDINGS MULTILINGÜES GENERADOS Y VALIDADOS
 ```
 
-### 5. Verificar conexión con Qdrant
+---
+
+### 3. Verificar Qdrant
 
 ```powershell
 python -m scripts.check_qdrant
 ```
 
-Este script crea una colección temporal en Qdrant, inserta vectores de prueba y verifica que la búsqueda por similitud funcione correctamente.
+Este script crea una colección temporal, inserta vectores de prueba y verifica que la búsqueda por similitud funcione correctamente.
 
-### 6. Indexar embeddings en Qdrant
+---
+
+### 4. Indexar embeddings en Qdrant
 
 ```powershell
 python -m scripts.index_qdrant --recreate
 ```
 
-Este script carga el archivo `.npy` de embeddings, lee los metadatos del manifiesto y crea la colección vectorial en Qdrant.
+Este script carga el archivo `.npy` de embeddings, lee el manifiesto multi-dataset e inserta los vectores en Qdrant.
 
 Colección usada:
 
 ```text
-caltech256_multilingual_v1
+visual_search_multidataset_v1
 ```
 
-Salida principal:
+Resultado esperado:
 
 ```text
-data/manifests/qdrant_index_report_multilingual.json
+Puntos enviados: 95,607
+Puntos en colección: 95,607
+INDEXACIÓN MULTILINGÜE EN QDRANT COMPLETADA
 ```
 
-### 7. Activar u optimizar HNSW en Qdrant
+---
+
+### 5. Optimizar HNSW
 
 ```powershell
 python -m scripts.enable_hnsw
 ```
 
-Este script ajusta la configuración de indexación HNSW y espera a que Qdrant termine de optimizar la colección.
+Este script ayuda a que Qdrant termine la optimización del índice HNSW.
 
-### 8. Probar búsqueda multimodal
+El estado `yellow` no necesariamente impide las búsquedas, pero para evaluación es recomendable intentar llegar a `green`.
 
-```powershell
-python -m scripts.check_multimodal_search
-```
-
-Este script prueba dos tipos de búsqueda:
-
-```text
-Texto → imagen
-Imagen → imagen
-```
-
-También calcula métricas simples como `Precision@K` para validar que el sistema recupera imágenes coherentes.
-
-Salida principal:
-
-```text
-data/manifests/multimodal_search_report.json
-```
-
+---
 
 ## Ejecución de la aplicación
 
-Una vez generados los embeddings e indexados en Qdrant, se debe levantar el backend y el frontend.
+Para ejecutar el sistema completo se necesitan tres procesos: Qdrant, FastAPI y Streamlit.
+
+---
 
 ### Terminal 1: Qdrant
 
 ```powershell
 docker compose up -d
 ```
+
+---
 
 ### Terminal 2: FastAPI
 
@@ -270,6 +294,8 @@ Endpoint de disponibilidad:
 http://127.0.0.1:8000/ready
 ```
 
+---
+
 ### Terminal 3: Streamlit
 
 ```powershell
@@ -281,3 +307,19 @@ Interfaz web:
 ```text
 http://localhost:8501
 ```
+
+---
+
+## Archivos generados localmente
+
+La carpeta `data/` contiene archivos generados localmente.
+
+```text
+data/images/
+data/thumbnails/
+data/embeddings/
+data/manifests/
+data/cache/
+```
+
+---

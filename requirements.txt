@@ -26,6 +26,13 @@ Pillow
 numpy
 pandas
 tqdm
+nltk
+
+# Hugging Face datasets
+datasets
+huggingface-hub
+hf-transfer
+pyarrow
 
 # Calidad y pruebas
 pytest

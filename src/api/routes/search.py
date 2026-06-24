@@ -46,35 +46,47 @@ def build_response(
     raw_result: dict[str, Any],
     request: Request,
 ) -> dict[str, Any]:
-    """Añade las URLs públicas de cada imagen."""
+    """Añade las URLs públicas y metadatos de cada imagen."""
     serialized_results: list[dict[str, Any]] = []
 
     for result in raw_result["results"]:
         point_id = result["point_id"]
 
         serialized_results.append(
-            {
-                "position": result["position"],
-                "point_id": point_id,
-                "score": result["score"],
-                "label": result["label"],
-                "label_id": result["label_id"],
-                "split": result["split"],
-                "row_index": result["row_index"],
-                "image_url": str(
-                    request.url_for(
-                        "get_image",
-                        point_id=point_id,
-                    )
-                ),
-                "thumbnail_url": str(
-                    request.url_for(
-                        "get_thumbnail",
-                        point_id=point_id,
-                    )
-                ),
-            }
-        )
+        {
+            "position": result["position"],
+            "point_id": point_id,
+            "score": result["score"],
+
+            "label": result["label"],
+            "raw_label": result.get("raw_label"),
+
+            "label_id": result["label_id"],
+            "split": result["split"],
+            "row_index": result["row_index"],
+
+            "dataset_id": result.get("dataset_id"),
+            "dataset_name": result.get("dataset_name"),
+            "domain": result.get("domain"),
+            "source_dataset": result.get("source_dataset"),
+
+            "width": result.get("width"),
+            "height": result.get("height"),
+
+            "image_url": str(
+                request.url_for(
+                    "get_image",
+                    point_id=point_id,
+                )
+            ),
+            "thumbnail_url": str(
+                request.url_for(
+                    "get_thumbnail",
+                    point_id=point_id,
+                )
+            ),
+        }
+    )
 
     return {
         "query_type": raw_result["query_type"],

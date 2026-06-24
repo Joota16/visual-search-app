@@ -21,9 +21,8 @@ from src.services.qdrant_service import (
     VECTOR_DIMENSION,
 )
 
-
-EMBEDDING_FILENAME = "caltech256_multilingual_clip_vit_b32.npy"
-REPORT_FILENAME = "qdrant_index_report_multilingual.json"
+EMBEDDING_FILENAME = "visual_search_multidataset_clip_vit_b32.npy"
+REPORT_FILENAME = "qdrant_index_report_multidataset.json"
 
 
 def parse_arguments() -> argparse.Namespace:
@@ -82,6 +81,9 @@ def build_payload(
     return {
         "record_key": record["record_key"],
         "dataset_id": record["dataset_id"],
+        "dataset_name": record.get("dataset_name", record["dataset_id"]),
+        "domain": record.get("domain", ""),
+        "source_dataset": record.get("source_dataset", ""),
         "split": record["split"],
         "row_index": int(record["row_index"]),
         "label_id": int(record["label_id"]),
@@ -93,13 +95,12 @@ def build_payload(
         "image_bytes": int(record["image_bytes"]),
         "thumbnail_bytes": int(record["thumbnail_bytes"]),
 
-        # Modelo nuevo
-        "embedding_type": "sentence_transformers_multilingual_clip",
+        "embedding_type": "sentence_transformers_multilingual_clip_multidataset",
         "embedding_image_model": "clip-ViT-B-32",
         "embedding_text_model": (
             "sentence-transformers/clip-ViT-B-32-multilingual-v1"
         ),
-        "embedding_version": "multilingual_v1",
+        "embedding_version": "multidataset_v1",
     }
 
 
@@ -159,15 +160,9 @@ def main() -> None:
     arguments = parse_arguments()
     settings = get_settings()
 
-    manifest_path = (
-        settings.manifest_path
-        / "caltech256_manifest.csv"
-    )
+    manifest_path = settings.manifest_file_path
 
-    embedding_path = (
-        settings.embedding_path
-        / EMBEDDING_FILENAME
-    )
+    embedding_path = settings.embedding_file_path
 
     report_path = (
         settings.manifest_path

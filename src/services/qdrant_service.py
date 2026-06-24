@@ -93,19 +93,15 @@ class QdrantService:
         )
 
         index_definitions = {
-            "dataset_id": (
-                models.PayloadSchemaType.KEYWORD
-            ),
+            "dataset_id": models.PayloadSchemaType.KEYWORD,
+            "dataset_name": models.PayloadSchemaType.KEYWORD,
+            "domain": models.PayloadSchemaType.KEYWORD,
+            "source_dataset": models.PayloadSchemaType.KEYWORD,
             "split": models.PayloadSchemaType.KEYWORD,
             "label": models.PayloadSchemaType.KEYWORD,
-            "label_id": (
-                models.PayloadSchemaType.INTEGER
-            ),
-            "row_index": (
-                models.PayloadSchemaType.INTEGER
-            ),
+            "label_id": models.PayloadSchemaType.INTEGER,
+            "row_index": models.PayloadSchemaType.INTEGER,
         }
-
         for field_name, schema_type in (
             index_definitions.items()
         ):

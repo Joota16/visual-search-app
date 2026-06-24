@@ -21,15 +21,15 @@ from src.services.embedding_service import EmbeddingService
 
 
 EMBEDDING_FILENAME = (
-    "caltech256_multilingual_clip_vit_b32.npy"
+    "visual_search_multidataset_clip_vit_b32.npy"
 )
 
 PROGRESS_FILENAME = (
-    "embedding_progress_multilingual.json"
+    "embedding_progress_multidataset.json"
 )
 
 REPORT_FILENAME = (
-    "embedding_report_multilingual.json"
+    "embedding_report_multidataset.json"
 )
 
 VALIDATION_CHUNK_SIZE = 4096
@@ -222,10 +222,7 @@ def main() -> None:
     """Genera todos los embeddings del dataset."""
     settings = get_settings()
 
-    manifest_path = (
-        settings.manifest_path
-        / "caltech256_manifest.csv"
-    )
+    manifest_path = settings.manifest_file_path
 
     settings.embedding_path.mkdir(
         parents=True,
@@ -265,7 +262,7 @@ def main() -> None:
     embedding_signature = {
         "image_model": image_model,
         "text_model": text_model,
-        "embedding_type": "sentence_transformers_multilingual_clip",
+        "embedding_type": "sentence_transformers_multilingual_clip_multidataset",
     }
 
     print("=" * 80)

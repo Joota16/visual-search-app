@@ -13,6 +13,60 @@ from qdrant_client import models
 from src.services.embedding_service import EmbeddingService
 from src.services.qdrant_service import QdrantService
 
+import re
+
+try:
+    from nltk.corpus import wordnet as wn
+except Exception:
+    wn = None
+
+
+WNID_PATTERN = re.compile(
+    r"^[nvar]\d{8}$",
+    re.IGNORECASE,
+)
+
+
+def humanize_label(
+    label: str,
+    dataset_id: str,
+) -> str:
+    """Convierte etiquetas técnicas en nombres legibles."""
+    clean_label = label.strip()
+
+    if dataset_id != "tiny_imagenet":
+        return clean_label
+
+    if not WNID_PATTERN.match(clean_label):
+        return clean_label
+
+    if wn is None:
+        return clean_label
+
+    try:
+        pos = clean_label[0].lower()
+        offset = int(clean_label[1:])
+
+        synset = wn.synset_from_pos_and_offset(
+            pos,
+            offset,
+        )
+
+        names = [
+            name.replace("_", " ")
+            for name in synset.lemma_names()
+        ]
+
+        if names:
+            return names[0].title()
+
+    except LookupError:
+        return clean_label
+
+    except Exception:
+        return clean_label
+
+    return clean_label
 
 DEFAULT_HNSW_EF = 128
 VECTOR_DIMENSION = 512
@@ -121,14 +175,39 @@ class SearchService:
         ):
             payload = point.payload or {}
 
+            dataset_id = str(
+                payload.get("dataset_id", "")
+            )
+
+            raw_label = str(
+                payload.get("label", "")
+            )
+
+            display_label = humanize_label(
+                label=raw_label,
+                dataset_id=dataset_id,
+            )
+
             results.append(
                 {
                     "position": position,
                     "point_id": str(point.id),
                     "score": float(point.score),
-                    "label": str(
-                        payload.get("label", "")
+
+                    "label": display_label,
+                    "raw_label": raw_label,
+
+                    "dataset_id": dataset_id,
+                    "dataset_name": str(
+                        payload.get("dataset_name", "")
                     ),
+                    "domain": str(
+                        payload.get("domain", "")
+                    ),
+                    "source_dataset": str(
+                        payload.get("source_dataset", "")
+                    ),
+
                     "label_id": int(
                         payload.get("label_id", -1)
                     ),
@@ -138,6 +217,14 @@ class SearchService:
                     "row_index": int(
                         payload.get("row_index", -1)
                     ),
+
+                    "width": int(
+                        payload.get("width", 0) or 0
+                    ),
+                    "height": int(
+                        payload.get("height", 0) or 0
+                    ),
+
                     "image_relpath": str(
                         payload.get(
                             "image_relpath",
