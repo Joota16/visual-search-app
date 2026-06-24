@@ -51,8 +51,9 @@ def ready(
 
     return {
         "status": "ready",
-        "model": settings.openclip_model,
-        "pretrained": settings.openclip_pretrained,
+        "image_model": settings.image_model,
+        "text_model": settings.text_model,
+        "model": "CLIP multilingüe",
         "device": settings.device,
         "cuda_available": torch.cuda.is_available(),
         "collection": settings.qdrant_collection,
@@ -82,8 +83,9 @@ def stats(
 
     return {
         "dataset": settings.hf_dataset,
-        "model": settings.openclip_model,
-        "pretrained": settings.openclip_pretrained,
+        "model": "CLIP multilingüe",
+        "image_model": settings.image_model,
+        "text_model": settings.text_model,
         "vector_dimension": 512,
         "distance": "cosine",
         "collection": settings.qdrant_collection,

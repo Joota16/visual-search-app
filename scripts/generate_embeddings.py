@@ -1,4 +1,4 @@
-"""Genera embeddings OpenCLIP para todo Caltech-256."""
+"""Genera embeddings de imágenes usando CLIP multilingüe para Caltech-256."""
 
 from __future__ import annotations
 
@@ -21,11 +21,16 @@ from src.services.embedding_service import EmbeddingService
 
 
 EMBEDDING_FILENAME = (
-    "caltech256_vit_b32_laion2b_s34b_b79k.npy"
+    "caltech256_multilingual_clip_vit_b32.npy"
 )
 
-PROGRESS_FILENAME = "embedding_progress.json"
-REPORT_FILENAME = "embedding_report.json"
+PROGRESS_FILENAME = (
+    "embedding_progress_multilingual.json"
+)
+
+REPORT_FILENAME = (
+    "embedding_report_multilingual.json"
+)
 
 VALIDATION_CHUNK_SIZE = 4096
 
@@ -58,28 +63,31 @@ def write_json_atomically(
     data: dict[str, Any],
     output_path: Path,
 ) -> None:
-    """Escribe un JSON utilizando un archivo temporal."""
     output_path.parent.mkdir(
         parents=True,
         exist_ok=True,
     )
 
-    temporary_path = output_path.with_suffix(
-        output_path.suffix + ".part"
+    for attempt in range(5):
+        try:
+            with output_path.open(
+                "w",
+                encoding="utf-8",
+            ) as json_file:
+                json.dump(
+                    data,
+                    json_file,
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            return
+
+        except PermissionError:
+            time.sleep(0.5)
+
+    raise PermissionError(
+        f"No se pudo escribir el archivo: {output_path}. "
     )
-
-    with temporary_path.open(
-        "w",
-        encoding="utf-8",
-    ) as json_file:
-        json.dump(
-            data,
-            json_file,
-            ensure_ascii=False,
-            indent=2,
-        )
-
-    temporary_path.replace(output_path)
 
 
 def load_progress(
@@ -204,8 +212,7 @@ def validate_embedding_file(
             atol=1e-3,
         ):
             raise RuntimeError(
-                "Se encontraron embeddings "
-                "sin normalizar."
+                "Se encontraron embeddings sin normalizar."
             )
 
     return minimum_norm, maximum_norm
@@ -243,18 +250,37 @@ def main() -> None:
     records = load_manifest(manifest_path)
     total_rows = len(records)
 
+    image_model = getattr(
+        settings,
+        "image_model",
+        "clip-ViT-B-32",
+    )
+
+    text_model = getattr(
+        settings,
+        "text_model",
+        "sentence-transformers/clip-ViT-B-32-multilingual-v1",
+    )
+
+    embedding_signature = {
+        "image_model": image_model,
+        "text_model": text_model,
+        "embedding_type": "sentence_transformers_multilingual_clip",
+    }
+
     print("=" * 80)
-    print("GENERACIÓN DE EMBEDDINGS — OPENCLIP")
+    print("GENERACIÓN DE EMBEDDINGS — CLIP MULTILINGÜE")
     print("=" * 80)
     print(f"Registros: {total_rows:,}")
     print(f"Batch size: {settings.batch_size}")
     print(f"Workers: {settings.num_workers}")
-    print(f"Modelo: {settings.openclip_model}")
-    print(f"Pesos: {settings.openclip_pretrained}")
+    print(f"Modelo imagen: {image_model}")
+    print(f"Modelo texto: {text_model}")
+    print(f"Device: {settings.device}")
     print(f"Salida: {embedding_path}")
 
     service = EmbeddingService(
-        settings=settings
+        settings=settings,
     )
 
     dataset = ManifestImageDataset(
@@ -263,13 +289,11 @@ def main() -> None:
         transform=service.preprocess,
     )
 
-    # Genera un embedding de prueba para obtener
-    # automáticamente la dimensión del modelo.
     sample_tensor, _ = dataset[0]
 
     sample_embedding = (
         service.encode_image_tensors(
-            sample_tensor.unsqueeze(0)
+            sample_tensor.unsqueeze(0),
         )
     )
 
@@ -284,7 +308,7 @@ def main() -> None:
         )
 
     previous_progress = load_progress(
-        progress_path
+        progress_path,
     )
 
     if previous_progress is None:
@@ -292,7 +316,8 @@ def main() -> None:
             raise RuntimeError(
                 "Existe un archivo de embeddings, "
                 "pero no existe un archivo de progreso. "
-                "No se sobrescribirá automáticamente."
+                "Para regenerar desde cero elimina el archivo: "
+                f"{embedding_path}"
             )
 
         embedding_matrix = (
@@ -312,40 +337,33 @@ def main() -> None:
     else:
         if not embedding_path.exists():
             raise RuntimeError(
-                "Existe progreso registrado, pero no "
-                "existe el archivo de embeddings."
+                "Existe progreso registrado, pero no existe "
+                "el archivo de embeddings."
             )
 
-        if int(
-            previous_progress["total_rows"]
-        ) != total_rows:
+        if int(previous_progress["total_rows"]) != total_rows:
             raise RuntimeError(
-                "El progreso pertenece a un "
-                "manifiesto diferente."
+                "El progreso pertenece a un manifiesto diferente."
             )
 
-        if int(
-            previous_progress[
-                "embedding_dimension"
-            ]
-        ) != embedding_dimension:
+        if int(previous_progress["embedding_dimension"]) != embedding_dimension:
             raise RuntimeError(
                 "La dimensión del progreso no coincide "
                 "con el modelo actual."
             )
 
-        if (
-            previous_progress["model"]
-            != settings.openclip_model
-            or previous_progress["pretrained"]
-            != settings.openclip_pretrained
-        ):
+        previous_signature = previous_progress.get(
+            "embedding_signature",
+        )
+
+        if previous_signature != embedding_signature:
             raise RuntimeError(
-                "El progreso pertenece a otro modelo."
+                "El progreso pertenece a otro modelo. "
+                "Elimina el progreso anterior o usa otra salida."
             )
 
         start_index = int(
-            previous_progress["next_index"]
+            previous_progress["next_index"],
         )
 
         embedding_matrix = (
@@ -362,8 +380,8 @@ def main() -> None:
 
         if embedding_matrix.shape != expected_shape:
             raise RuntimeError(
-                "El archivo existente tiene una forma "
-                f"incorrecta: {embedding_matrix.shape}"
+                "El archivo existente tiene una forma incorrecta: "
+                f"{embedding_matrix.shape}"
             )
 
     if start_index < 0 or start_index > total_rows:
@@ -404,7 +422,7 @@ def main() -> None:
         ):
             batch_embeddings = (
                 service.encode_image_tensors(
-                    image_batch
+                    image_batch,
                 )
             )
 
@@ -415,20 +433,13 @@ def main() -> None:
                 .astype(np.int64)
             )
 
-            if batch_embeddings.shape[0] != len(
-                indices
-            ):
+            if batch_embeddings.shape[0] != len(indices):
                 raise RuntimeError(
                     "La cantidad de embeddings no coincide "
                     "con los índices del lote."
                 )
 
-            embedding_matrix[indices] = (
-                batch_embeddings
-            )
-
-            # Se guarda cada lote para garantizar
-            # que el checkpoint sea reanudable.
+            embedding_matrix[indices] = batch_embeddings
             embedding_matrix.flush()
 
             next_index = int(indices[-1]) + 1
@@ -436,18 +447,13 @@ def main() -> None:
 
             write_json_atomically(
                 {
-                    "model": settings.openclip_model,
-                    "pretrained": (
-                        settings.openclip_pretrained
-                    ),
+                    "embedding_signature": embedding_signature,
                     "total_rows": total_rows,
-                    "embedding_dimension": (
-                        embedding_dimension
-                    ),
+                    "embedding_dimension": embedding_dimension,
                     "next_index": next_index,
                     "completed": False,
                     "updated_at_utc": datetime.now(
-                        timezone.utc
+                        timezone.utc,
                     ).isoformat(),
                 },
                 progress_path,
@@ -497,14 +503,13 @@ def main() -> None:
     )
 
     final_progress = {
-        "model": settings.openclip_model,
-        "pretrained": settings.openclip_pretrained,
+        "embedding_signature": embedding_signature,
         "total_rows": total_rows,
         "embedding_dimension": embedding_dimension,
         "next_index": total_rows,
         "completed": True,
         "updated_at_utc": datetime.now(
-            timezone.utc
+            timezone.utc,
         ).isoformat(),
     }
 
@@ -544,9 +549,7 @@ def main() -> None:
     print("\n" + "=" * 80)
     print("RESULTADO")
     print("=" * 80)
-    print(
-        f"Embeddings generados: {total_rows:,}"
-    )
+    print(f"Embeddings generados: {total_rows:,}")
     print(
         f"Forma: ({total_rows:,}, "
         f"{embedding_dimension})"
@@ -585,7 +588,7 @@ def main() -> None:
     print(f"Archivo: {embedding_path}")
     print(f"Reporte: {report_path}")
     print("=" * 80)
-    print("EMBEDDINGS GENERADOS Y VALIDADOS")
+    print("EMBEDDINGS MULTILINGÜES GENERADOS Y VALIDADOS")
     print("=" * 80)
 
 

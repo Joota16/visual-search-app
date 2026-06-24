@@ -115,9 +115,9 @@ def render_sidebar(
         st.divider()
 
         st.caption(
-            "Caltech-256 · OpenCLIP · "
+            "Caltech-256 · CLIP multilingüe · "
             "Qdrant · FastAPI · Streamlit"
-        )
+)
 
 
 def format_label(label: str) -> str:

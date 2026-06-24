@@ -26,10 +26,7 @@ class Settings(BaseSettings):
     
     
     batch_size: int = 64
-    num_workers: int = 4
-    prefetch_factor: int = 2
 
-    embedding_directory: Path = Path("data/embeddings")
     model_config = SettingsConfigDict(
         env_file=PROJECT_ROOT / ".env",
         env_file_encoding="utf-8",
@@ -57,14 +54,19 @@ class Settings(BaseSettings):
     manifest_directory: Path = Path("data/manifests")
     
     qdrant_url: str = "http://localhost:6333"
-    qdrant_collection: str = "caltech256_vit_b32_v1"
+    qdrant_collection: str = "caltech256_multilingual_v1"
     qdrant_timeout_seconds: float = 120.0
 
     upsert_batch_size: int = 256
 
-    embedding_filename: str = (
-        "caltech256_vit_b32_laion2b_s34b_b79k.npy"
-    )
+    embedding_filename: str = ("caltech256_multilingual_clip_vit_b32.npy")
+
+    image_model: str = "clip-ViT-B-32"
+    text_model: str = "sentence-transformers/clip-ViT-B-32-multilingual-v1"
+
+    embedding_directory: Path = Path("data/embeddings")
+    num_workers: int = 4
+    prefetch_factor: int = 2
 
     def resolve_path(self, path: Path) -> Path:
         """Convierte una ruta relativa en una ruta absoluta del proyecto."""

@@ -1,210 +1,155 @@
-"""Servicio para generar embeddings multimodales con OpenCLIP."""
+"""Servicio de embeddings usando SentenceTransformers CLIP multilingüe."""
 
 from __future__ import annotations
 
-from threading import Lock
-import os
-from collections.abc import Sequence
-from typing import Any
+from typing import Iterable
 
 import numpy as np
 import torch
 from PIL import Image
-
-from src.core.config import Settings, get_settings
+from sentence_transformers import SentenceTransformer
+from torchvision.transforms import functional as TF
 
 
 class EmbeddingService:
-    """Carga OpenCLIP y genera embeddings de imágenes y textos."""
+    """Genera embeddings de texto e imagen en el mismo espacio vectorial."""
 
-    def __init__(
-        self,
-        settings: Settings | None = None,
-    ) -> None:
-        self.settings = settings or get_settings()
-        self._inference_lock = Lock()
-        # Deben configurarse antes de importar OpenCLIP,
-        # porque OpenCLIP utiliza Hugging Face Hub.
-        self.settings.hf_home_path.mkdir(
-            parents=True,
-            exist_ok=True,
-        )
+    def __init__(self, settings):
+        self.settings = settings
+        self.device = settings.device
 
-        self.settings.hf_hub_cache_path.mkdir(
-            parents=True,
-            exist_ok=True,
-        )
-
-        os.environ["HF_HOME"] = str(
-            self.settings.hf_home_path
-        )
-
-        os.environ["HF_HUB_CACHE"] = str(
-            self.settings.hf_hub_cache_path
-        )
-
-        # Importación diferida para garantizar que el caché
-        # esté configurado antes de cargar Hugging Face Hub.
-        import open_clip
-
-        self.open_clip = open_clip
-
-        if (
-            self.settings.device.lower() == "cuda"
-            and not torch.cuda.is_available()
-        ):
+        if self.device == "cuda" and not torch.cuda.is_available():
             raise RuntimeError(
                 "DEVICE=cuda, pero PyTorch no detecta CUDA."
             )
 
-        self.device = torch.device(
-            self.settings.device.lower()
+        self.image_model_name = getattr(
+            settings,
+            "image_model",
+            "clip-ViT-B-32",
         )
 
-        print(
-            "Cargando OpenCLIP "
-            f"{self.settings.openclip_model} "
-            f"({self.settings.openclip_pretrained})..."
+        self.text_model_name = getattr(
+            settings,
+            "text_model",
+            "sentence-transformers/clip-ViT-B-32-multilingual-v1",
         )
 
-        model, _, preprocess = (
-            open_clip.create_model_and_transforms(
-                self.settings.openclip_model,
-                pretrained=self.settings.openclip_pretrained,
-            )
+        print("=" * 70)
+        print("CARGANDO CLIP MULTILINGÜE CON SENTENCE-TRANSFORMERS")
+        print("=" * 70)
+        print(f"Modelo imagen: {self.image_model_name}")
+        print(f"Modelo texto: {self.text_model_name}")
+        print(f"Device: {self.device}")
+
+        self.image_model = SentenceTransformer(
+            self.image_model_name,
+            device=self.device,
         )
 
-        self.model: Any = model.to(self.device)
-        self.model.eval()
-
-        self.preprocess = preprocess
-        self.tokenizer = open_clip.get_tokenizer(
-            self.settings.openclip_model
+        self.text_model = SentenceTransformer(
+            self.text_model_name,
+            device=self.device,
         )
 
-    def _use_autocast(self) -> bool:
-        """Indica si debe emplearse precisión mixta."""
-        return (
-            self.device.type == "cuda"
-            and self.settings.model_precision.lower()
-            == "float16"
-        )
+        self.embedding_dim = 512
+
+    def preprocess(self, image: Image.Image) -> torch.Tensor:
+        """ Compatibilidad con ManifestImageDataset.
+        Convierte todas las imágenes a RGB y las redimensiona a 224x224
+        para que el DataLoader pueda formar batches sin error.
+        """
+        image = image.convert("RGB")
+        image = image.resize((224, 224))
+
+        return TF.to_tensor(image)
+
     def encode_image_tensors(
         self,
-        batch: torch.Tensor,
+        image_batch: torch.Tensor,
     ) -> np.ndarray:
-        """Genera embeddings a partir de un lote preprocesado."""
+        """
+        Genera embeddings desde un batch de tensores.
 
-        if batch.ndim != 4:
-            raise ValueError(
-                "El lote debe tener forma "
-                "(batch, channels, height, width)."
-            )
+        Este método mantiene compatibilidad con generate_embeddings.py.
+        """
+        images = [
+            TF.to_pil_image(image.cpu()).convert("RGB")
+            for image in image_batch
+        ]
 
-        if batch.shape[0] == 0:
-            raise ValueError(
-                "El lote de imágenes está vacío."
-            )
+        embeddings = self.image_model.encode(
+            images,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )
 
-        with self._inference_lock:
-            batch = batch.to(
-                self.device,
-                non_blocking=True,
-            )
+        return embeddings.astype(np.float32)
 
-            with torch.inference_mode():
-                if self._use_autocast():
-                    with torch.autocast(
-                        device_type="cuda",
-                        dtype=torch.float16,
-                    ):
-                        features = self.model.encode_image(
-                            batch,
-                            normalize=True,
-                        )
-                else:
-                    features = self.model.encode_image(
-                        batch,
-                        normalize=True,
-                    )
+    def encode_image(
+        self,
+        image: Image.Image,
+    ) -> np.ndarray:
+        """Genera embedding para una sola imagen PIL."""
+        image = image.convert("RGB")
 
-            embeddings = (
-                features
-                .float()
-                .cpu()
-                .numpy()
-                .astype("float32")
-            )
+        embedding = self.image_model.encode(
+            image,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )
 
-        return np.ascontiguousarray(embeddings)
-    
+        return embedding.astype(np.float32)
+
     def encode_images(
         self,
-        images: Sequence[Image.Image],
+        images: Iterable[Image.Image],
     ) -> np.ndarray:
-        """Genera embeddings normalizados para imágenes."""
-
-        if not images:
-            raise ValueError(
-                "Debe proporcionarse al menos una imagen."
-            )
-
-        image_tensors = [
-            self.preprocess(
-                image.convert("RGB")
-            )
+        """Genera embeddings para varias imágenes PIL."""
+        rgb_images = [
+            image.convert("RGB")
             for image in images
         ]
 
-        batch = torch.stack(image_tensors)
+        embeddings = self.image_model.encode(
+            rgb_images,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )
 
-        return self.encode_image_tensors(batch)
+        return embeddings.astype(np.float32)
+
+    def encode_text(
+        self,
+        text: str,
+    ) -> np.ndarray:
+        """Genera embedding para una consulta textual."""
+        embedding = self.text_model.encode(
+            text,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )
+
+        return embedding.astype(np.float32)
 
     def encode_texts(
         self,
-        texts: Sequence[str],
+        texts: list[str],
     ) -> np.ndarray:
-        """Genera embeddings normalizados para textos."""
-        clean_texts = [
-            text.strip()
-            for text in texts
-            if text.strip()
-        ]
-
-        if not clean_texts:
-            raise ValueError(
-                "Debe proporcionarse al menos un texto válido."
-            )
-
-        tokens = self.tokenizer(
-            clean_texts
-        ).to(
-            self.device,
-            non_blocking=True,
+        """Genera embeddings para varias consultas textuales."""
+        embeddings = self.text_model.encode(
+            texts,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+            show_progress_bar=False,
         )
 
-        with torch.inference_mode():
-            if self._use_autocast():
-                with torch.autocast(
-                    device_type="cuda",
-                    dtype=torch.float16,
-                ):
-                    features = self.model.encode_text(
-                        tokens,
-                        normalize=True,
-                    )
-            else:
-                features = self.model.encode_text(
-                    tokens,
-                    normalize=True,
-                )
+        return embeddings.astype(np.float32)
 
-        embeddings = (
-            features
-            .float()
-            .cpu()
-            .numpy()
-            .astype("float32")
-        )
-
-        return np.ascontiguousarray(embeddings)
+    def get_embedding_dim(self) -> int:
+        """Devuelve la dimensión del embedding."""
+        return self.embedding_dim

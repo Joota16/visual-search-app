@@ -46,3 +46,6 @@ Thumbs.db
 # Embeddings generados
 data/embeddings/
 *.npy
+
+# Datos generados
+data/

@@ -1,4 +1,4 @@
-"""Carga embeddings y metadatos de Caltech-256 en Qdrant."""
+"""Carga embeddings multilingües y metadatos de Caltech-256 en Qdrant."""
 
 from __future__ import annotations
 
@@ -22,14 +22,15 @@ from src.services.qdrant_service import (
 )
 
 
-REPORT_FILENAME = "qdrant_index_report.json"
+EMBEDDING_FILENAME = "caltech256_multilingual_clip_vit_b32.npy"
+REPORT_FILENAME = "qdrant_index_report_multilingual.json"
 
 
 def parse_arguments() -> argparse.Namespace:
     """Lee argumentos de la terminal."""
     parser = argparse.ArgumentParser(
         description=(
-            "Inserta los embeddings de Caltech-256 "
+            "Inserta los embeddings multilingües de Caltech-256 "
             "en Qdrant."
         )
     )
@@ -44,9 +45,7 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--recreate",
         action="store_true",
-        help=(
-            "Elimina y vuelve a crear la colección."
-        ),
+        help="Elimina y vuelve a crear la colección.",
     )
 
     return parser.parse_args()
@@ -79,7 +78,7 @@ def load_manifest(
 def build_payload(
     record: dict[str, str],
 ) -> dict[str, Any]:
-    """Convierte una fila del manifiesto en payload."""
+    """Convierte una fila del manifiesto en payload de Qdrant."""
     return {
         "record_key": record["record_key"],
         "dataset_id": record["dataset_id"],
@@ -88,20 +87,19 @@ def build_payload(
         "label_id": int(record["label_id"]),
         "label": record["label"],
         "image_relpath": record["image_relpath"],
-        "thumbnail_relpath": (
-            record["thumbnail_relpath"]
-        ),
+        "thumbnail_relpath": record["thumbnail_relpath"],
         "width": int(record["width"]),
         "height": int(record["height"]),
         "image_bytes": int(record["image_bytes"]),
-        "thumbnail_bytes": int(
-            record["thumbnail_bytes"]
+        "thumbnail_bytes": int(record["thumbnail_bytes"]),
+
+        # Modelo nuevo
+        "embedding_type": "sentence_transformers_multilingual_clip",
+        "embedding_image_model": "clip-ViT-B-32",
+        "embedding_text_model": (
+            "sentence-transformers/clip-ViT-B-32-multilingual-v1"
         ),
-        "embedding_model": "ViT-B-32",
-        "embedding_pretrained": (
-            "laion2b_s34b_b79k"
-        ),
-        "embedding_version": "v1",
+        "embedding_version": "multilingual_v1",
     }
 
 
@@ -110,6 +108,11 @@ def write_json_atomically(
     output_path: Path,
 ) -> None:
     """Guarda un JSON mediante un archivo temporal."""
+    output_path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
     temporary_path = output_path.with_suffix(
         output_path.suffix + ".part"
     )
@@ -140,9 +143,8 @@ def validate_embeddings(
 
     if embeddings.shape != expected_shape:
         raise RuntimeError(
-            "La forma del archivo de embeddings "
-            f"es incorrecta: {embeddings.shape} "
-            f"!= {expected_shape}"
+            "La forma del archivo de embeddings es incorrecta: "
+            f"{embeddings.shape} != {expected_shape}"
         )
 
     if embeddings.dtype != np.float32:
@@ -162,15 +164,27 @@ def main() -> None:
         / "caltech256_manifest.csv"
     )
 
+    embedding_path = (
+        settings.embedding_path
+        / EMBEDDING_FILENAME
+    )
+
     report_path = (
         settings.manifest_path
         / REPORT_FILENAME
     )
 
+    if not embedding_path.exists():
+        raise FileNotFoundError(
+            "No existe el archivo de embeddings multilingües: "
+            f"{embedding_path}\n"
+            "Primero ejecuta: python -m scripts.generate_embeddings"
+        )
+
     records = load_manifest(manifest_path)
 
     embeddings = np.load(
-        settings.embedding_file_path,
+        embedding_path,
         mmap_mode="r",
     )
 
@@ -194,23 +208,15 @@ def main() -> None:
     )
 
     print("=" * 80)
-    print("INDEXACIÓN EN QDRANT")
+    print("INDEXACIÓN EN QDRANT — CLIP MULTILINGÜE")
     print("=" * 80)
     print(f"Colección: {settings.qdrant_collection}")
+    print(f"Archivo embeddings: {embedding_path}")
     print(f"Registros disponibles: {len(records):,}")
     print(f"Registros a insertar: {target_count:,}")
-    print(
-        f"Dimensión vectorial: "
-        f"{VECTOR_DIMENSION}"
-    )
-    print(
-        f"Batch de inserción: "
-        f"{settings.upsert_batch_size}"
-    )
-    print(
-        f"Recrear colección: "
-        f"{arguments.recreate}"
-    )
+    print(f"Dimensión vectorial: {VECTOR_DIMENSION}")
+    print(f"Batch de inserción: {settings.upsert_batch_size}")
+    print(f"Recrear colección: {arguments.recreate}")
     print("=" * 80)
 
     service = QdrantService(
@@ -266,9 +272,7 @@ def main() -> None:
             ).tolist()
 
             service.client.upsert(
-                collection_name=(
-                    settings.qdrant_collection
-                ),
+                collection_name=settings.qdrant_collection,
                 points=models.Batch(
                     ids=batch_ids,
                     payloads=batch_payloads,
@@ -300,9 +304,8 @@ def main() -> None:
         if arguments.limit is None:
             if points_count != len(records):
                 raise RuntimeError(
-                    "La colección no contiene todos "
-                    f"los puntos: {points_count:,} "
-                    f"!= {len(records):,}"
+                    "La colección no contiene todos los puntos: "
+                    f"{points_count:,} != {len(records):,}"
                 )
 
         elif points_count < target_count:
@@ -318,27 +321,23 @@ def main() -> None:
         )
 
         report = {
-            "collection": (
-                settings.qdrant_collection
-            ),
+            "collection": settings.qdrant_collection,
             "qdrant_url": settings.qdrant_url,
+            "embedding_file": str(embedding_path),
+            "embedding_type": "sentence_transformers_multilingual_clip",
+            "embedding_image_model": "clip-ViT-B-32",
+            "embedding_text_model": (
+                "sentence-transformers/clip-ViT-B-32-multilingual-v1"
+            ),
             "target_count": target_count,
             "points_count": points_count,
-            "indexed_vectors_count": (
-                indexed_vectors_count
-            ),
+            "indexed_vectors_count": indexed_vectors_count,
             "vector_dimension": VECTOR_DIMENSION,
             "distance": "cosine",
-            "upsert_batch_size": (
-                settings.upsert_batch_size
-            ),
+            "upsert_batch_size": settings.upsert_batch_size,
             "elapsed_seconds": elapsed_seconds,
-            "points_per_second": (
-                points_per_second
-            ),
-            "collection_status": str(
-                collection_info.status
-            ),
+            "points_per_second": points_per_second,
+            "collection_status": str(collection_info.status),
             "generated_at_utc": datetime.now(
                 timezone.utc
             ).isoformat(),
@@ -352,30 +351,21 @@ def main() -> None:
         print("\n" + "=" * 80)
         print("RESULTADO")
         print("=" * 80)
-        print(
-            f"Puntos enviados: {target_count:,}"
-        )
-        print(
-            f"Puntos en colección: "
-            f"{points_count:,}"
-        )
+        print(f"Puntos enviados: {target_count:,}")
+        print(f"Puntos en colección: {points_count:,}")
         print(
             f"Vectores indexados por HNSW: "
             f"{indexed_vectors_count:,}"
         )
-        print(
-            f"Tiempo: {elapsed_seconds:.2f} s"
-        )
+        print(f"Tiempo: {elapsed_seconds:.2f} s")
         print(
             f"Rendimiento: "
             f"{points_per_second:.2f} puntos/s"
         )
-        print(
-            f"Estado: {collection_info.status}"
-        )
+        print(f"Estado: {collection_info.status}")
         print(f"Reporte: {report_path}")
         print("=" * 80)
-        print("INDEXACIÓN EN QDRANT COMPLETADA")
+        print("INDEXACIÓN MULTILINGÜE EN QDRANT COMPLETADA")
         print("=" * 80)
 
     finally:
