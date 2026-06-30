@@ -1,0 +1,142 @@
+[
+  {
+    "query_id": "en_simple_001",
+    "query": "dog",
+    "language": "en",
+    "category": "simple",
+    "relevant_labels": ["dog", "greyhound"]
+  },
+  {
+    "query_id": "es_simple_001",
+    "query": "perro",
+    "language": "es",
+    "category": "simple",
+    "relevant_labels": ["dog", "greyhound"]
+  },
+  {
+    "query_id": "en_simple_002",
+    "query": "grapes",
+    "language": "en",
+    "category": "simple",
+    "relevant_labels": ["grapes"]
+  },
+  {
+    "query_id": "es_simple_002",
+    "query": "uvas",
+    "language": "es",
+    "category": "simple",
+    "relevant_labels": ["grapes"]
+  },
+  {
+    "query_id": "en_simple_003",
+    "query": "tennis ball",
+    "language": "en",
+    "category": "simple",
+    "relevant_labels": ["tennis-ball"]
+  },
+  {
+    "query_id": "es_simple_003",
+    "query": "pelota de tenis",
+    "language": "es",
+    "category": "simple",
+    "relevant_labels": ["tennis-ball"]
+  },
+  {
+    "query_id": "en_simple_004",
+    "query": "motorcycle",
+    "language": "en",
+    "category": "simple",
+    "relevant_labels": ["motorbikes-101"]
+  },
+  {
+    "query_id": "es_simple_004",
+    "query": "motocicleta",
+    "language": "es",
+    "category": "simple",
+    "relevant_labels": ["motorbikes-101"]
+  },
+  {
+    "query_id": "en_simple_005",
+    "query": "guitar",
+    "language": "en",
+    "category": "simple",
+    "relevant_labels": ["electric-guitar-101"]
+  },
+  {
+    "query_id": "es_simple_005",
+    "query": "guitarra",
+    "language": "es",
+    "category": "simple",
+    "relevant_labels": ["electric-guitar-101"]
+  },
+  {
+    "query_id": "es_long_001",
+    "query": "una motocicleta roja deportiva sobre una carretera",
+    "language": "es",
+    "category": "long",
+    "relevant_labels": ["motorbikes-101"]
+  },
+  {
+    "query_id": "es_long_002",
+    "query": "perro jugando en la playa con una pelota",
+    "language": "es",
+    "category": "compositional",
+    "relevant_labels": ["dog", "greyhound", "tennis-ball"]
+  },
+  {
+    "query_id": "es_long_003",
+    "query": "frutas moradas en un racimo sobre una mesa",
+    "language": "es",
+    "category": "long",
+    "relevant_labels": ["grapes"]
+  },
+  {
+    "query_id": "en_long_001",
+    "query": "a dog playing on the beach with a ball",
+    "language": "en",
+    "category": "compositional",
+    "relevant_labels": ["dog", "greyhound", "tennis-ball"]
+  },
+  {
+    "query_id": "en_long_002",
+    "query": "a red sports motorcycle on a road",
+    "language": "en",
+    "category": "long",
+    "relevant_labels": ["motorbikes-101"]
+  },
+  {
+    "query_id": "es_specific_001",
+    "query": "pastor aleman",
+    "language": "es",
+    "category": "specific",
+    "relevant_labels": ["dog", "greyhound"]
+  },
+  {
+    "query_id": "en_specific_001",
+    "query": "german shepherd",
+    "language": "en",
+    "category": "specific",
+    "relevant_labels": ["dog", "greyhound"]
+  },
+  {
+    "query_id": "es_ambiguous_001",
+    "query": "cristo",
+    "language": "es",
+    "category": "ambiguous",
+    "relevant_labels": ["jesus-christ"]
+  },
+  {
+    "query_id": "en_ambiguous_001",
+    "query": "jesus christ",
+    "language": "en",
+    "category": "ambiguous",
+    "relevant_labels": ["jesus-christ"]
+  },
+  {
+    "query_id": "es_simple_006",
+    "query": "paraguas",
+    "language": "es",
+    "category": "simple",
+    "relevant_labels": ["umbrella-101"]
+  }
+]

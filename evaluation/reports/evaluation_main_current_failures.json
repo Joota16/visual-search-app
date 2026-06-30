@@ -1,0 +1,4506 @@
+{
+  "queries_without_hit_top_10": [
+    {
+      "query_id": "es_003",
+      "query": "cabra",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "goat"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 9.629299980588257,
+      "search_ms": 28.71220000088215,
+      "total_ms": 38.410999928601086,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "horse",
+          "score": 0.29042625,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "horse",
+          "score": 0.28451234,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "greyhound",
+          "score": 0.28408617,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "greyhound",
+          "score": 0.28211024,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "horse",
+          "score": 0.27912974,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "horse",
+          "score": 0.27726465,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "horse",
+          "score": 0.27687484,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "horse",
+          "score": 0.26791793,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "horse",
+          "score": 0.26764247,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "horse",
+          "score": 0.2672922,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_006",
+      "query": "rana",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "frog"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 11.48809993173927,
+      "search_ms": 38.364000036381185,
+      "total_ms": 49.91639999207109,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "people",
+          "score": 0.27420536,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "people",
+          "score": 0.26651078,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "camel",
+          "score": 0.2664624,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "kangaroo-101",
+          "score": 0.26599059,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "llama-101",
+          "score": 0.26523888,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "faces-easy-101",
+          "score": 0.26521087,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "faces-easy-101",
+          "score": 0.26411262,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "faces-easy-101",
+          "score": 0.26031086,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "dog",
+          "score": 0.2600398,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "faces-easy-101",
+          "score": 0.259516,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_009",
+      "query": "pez dorado",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "goldfish"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 32.64600003603846,
+      "search_ms": 18.923899973742664,
+      "total_ms": 51.682100049220026,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "pez-dispenser",
+          "score": 0.34179533,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "pez-dispenser",
+          "score": 0.31955963,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "pez-dispenser",
+          "score": 0.31755203,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "pez-dispenser",
+          "score": 0.3141681,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "pez-dispenser",
+          "score": 0.3071574,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "xylophone",
+          "score": 0.30605882,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "pez-dispenser",
+          "score": 0.29798356,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "mailbox",
+          "score": 0.291391,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "pez-dispenser",
+          "score": 0.29066235,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "pez-dispenser",
+          "score": 0.28792897,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_010",
+      "query": "camello",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "camel"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 39.28349993657321,
+      "search_ms": 40.80529999919236,
+      "total_ms": 80.19249991048127,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "grapes",
+          "score": 0.2664767,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "toad",
+          "score": 0.26635072,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "snail",
+          "score": 0.26368523,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "spaghetti",
+          "score": 0.2581995,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "spaghetti",
+          "score": 0.25722444,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "spaghetti",
+          "score": 0.25684136,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "covered-wagon",
+          "score": 0.25636077,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "mushroom",
+          "score": 0.25433385,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "grapes",
+          "score": 0.25422853,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "spaghetti",
+          "score": 0.25421488,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_019",
+      "query": "uña de guitarra",
+      "language": "es",
+      "category": "object",
+      "query_type": "simple",
+      "relevant_labels": [
+        "guitar-pick"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 12.641699984669685,
+      "search_ms": 37.7944998908788,
+      "total_ms": 50.498399999924004,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "electric-guitar-101",
+          "score": 0.31076866,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "electric-guitar-101",
+          "score": 0.30906367,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "mandolin",
+          "score": 0.30643317,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "electric-guitar-101",
+          "score": 0.30348626,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "mandolin",
+          "score": 0.30259883,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "electric-guitar-101",
+          "score": 0.30160663,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "electric-guitar-101",
+          "score": 0.29787266,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "electric-guitar-101",
+          "score": 0.29682347,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "stirrups",
+          "score": 0.29671454,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "electric-guitar-101",
+          "score": 0.29635856,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_021",
+      "query": "cañon",
+      "language": "es",
+      "category": "object",
+      "query_type": "simple",
+      "relevant_labels": [
+        "cannon"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 17.606399953365326,
+      "search_ms": 32.877299934625626,
+      "total_ms": 50.63880002126098,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "waterfall",
+          "score": 0.28809896,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "clutter",
+          "score": 0.280971,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "radio-telescope",
+          "score": 0.2756302,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "waterfall",
+          "score": 0.2700337,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "clutter",
+          "score": 0.26975292,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "cactus",
+          "score": 0.26937294,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "license-plate",
+          "score": 0.26901644,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "teepee",
+          "score": 0.2667954,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "teepee",
+          "score": 0.2667954,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "ladder",
+          "score": 0.265989,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_026",
+      "query": "avion de combate",
+      "language": "es",
+      "category": "vehicle",
+      "query_type": "simple",
+      "relevant_labels": [
+        "fighter-jet"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 12.775700073689222,
+      "search_ms": 30.599999940022826,
+      "total_ms": 43.46360010094941,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "airplanes-101",
+          "score": 0.31264848,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "airplanes-101",
+          "score": 0.31094927,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "airplanes-101",
+          "score": 0.30589867,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "airplanes-101",
+          "score": 0.30558792,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "airplanes-101",
+          "score": 0.3054391,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "airplanes-101",
+          "score": 0.3036117,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "airplanes-101",
+          "score": 0.30319062,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "airplanes-101",
+          "score": 0.3019504,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "airplanes-101",
+          "score": 0.30124962,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "airplanes-101",
+          "score": 0.30085993,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_030",
+      "query": "arpa",
+      "language": "es",
+      "category": "instrument",
+      "query_type": "simple",
+      "relevant_labels": [
+        "harp"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 19.1945000551641,
+      "search_ms": 34.88409996498376,
+      "total_ms": 54.191599949263036,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "french-horn",
+          "score": 0.29600018,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "french-horn",
+          "score": 0.2756787,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "french-horn",
+          "score": 0.2756769,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "french-horn",
+          "score": 0.27561948,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "french-horn",
+          "score": 0.27408785,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "french-horn",
+          "score": 0.27400982,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "french-horn",
+          "score": 0.27386057,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "french-horn",
+          "score": 0.27369326,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "french-horn",
+          "score": 0.27324754,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "french-horn",
+          "score": 0.27252942,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_036",
+      "query": "pastor aleman",
+      "language": "es",
+      "category": "specific",
+      "query_type": "specific",
+      "relevant_labels": [
+        "dog",
+        "greyhound"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 19.50689998921007,
+      "search_ms": 36.83100000489503,
+      "total_ms": 56.47690000478178,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "people",
+          "score": 0.28649598,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "people",
+          "score": 0.2820242,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "people",
+          "score": 0.26608515,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "t-shirt",
+          "score": 0.25863332,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "people",
+          "score": 0.25766742,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "faces-easy-101",
+          "score": 0.2570752,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "faces-easy-101",
+          "score": 0.256019,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "people",
+          "score": 0.25464076,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "faces-easy-101",
+          "score": 0.25341344,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "faces-easy-101",
+          "score": 0.25225347,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_038",
+      "query": "pez dorado pequeño",
+      "language": "es",
+      "category": "animal",
+      "query_type": "descriptive",
+      "relevant_labels": [
+        "goldfish"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 11.613300070166588,
+      "search_ms": 13.107400038279593,
+      "total_ms": 24.78450001217425,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "pez-dispenser",
+          "score": 0.34571016,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "pez-dispenser",
+          "score": 0.3264951,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "pez-dispenser",
+          "score": 0.32467252,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "pez-dispenser",
+          "score": 0.31919995,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "xylophone",
+          "score": 0.30697066,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "pez-dispenser",
+          "score": 0.29819918,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "pez-dispenser",
+          "score": 0.29688293,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "mailbox",
+          "score": 0.29630703,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "pez-dispenser",
+          "score": 0.29579598,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "pez-dispenser",
+          "score": 0.2929265,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_039",
+      "query": "animal grande con cuello largo",
+      "language": "es",
+      "category": "animal",
+      "query_type": "descriptive",
+      "relevant_labels": [
+        "giraffe"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 16.70850010123104,
+      "search_ms": 17.95560005120933,
+      "total_ms": 34.76710000541061,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "backpack",
+          "score": 0.299699,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "llama-101",
+          "score": 0.2814327,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "wine-bottle",
+          "score": 0.27866012,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "backpack",
+          "score": 0.27820975,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "horse",
+          "score": 0.27780825,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "elephant-101",
+          "score": 0.27761286,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "t-shirt",
+          "score": 0.27698135,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "llama-101",
+          "score": 0.27577808,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "saddle",
+          "score": 0.2728922,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "camel",
+          "score": 0.27261835,
+          "is_relevant": false
+        }
+      ]
+    }
+  ],
+  "queries_with_incorrect_top_1": [
+    {
+      "query_id": "es_003",
+      "query": "cabra",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "goat"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 9.629299980588257,
+      "search_ms": 28.71220000088215,
+      "total_ms": 38.410999928601086,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "horse",
+          "score": 0.29042625,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "horse",
+          "score": 0.28451234,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "greyhound",
+          "score": 0.28408617,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "greyhound",
+          "score": 0.28211024,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "horse",
+          "score": 0.27912974,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "horse",
+          "score": 0.27726465,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "horse",
+          "score": 0.27687484,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "horse",
+          "score": 0.26791793,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "horse",
+          "score": 0.26764247,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "horse",
+          "score": 0.2672922,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "en_004",
+      "query": "horse",
+      "language": "en",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "horse"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.8,
+      "hit_at_1": 0.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 0.5,
+      "ndcg_at_10": 0.6309297535714575,
+      "embedding_ms": 12.36270007211715,
+      "search_ms": 8.548400015570223,
+      "total_ms": 20.97670000512153,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "unicorn",
+          "score": 0.31693053,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "horse",
+          "score": 0.31623864,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "horse",
+          "score": 0.3141392,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "horse",
+          "score": 0.31409353,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "horse",
+          "score": 0.31342143,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "horse",
+          "score": 0.31336007,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "horse",
+          "score": 0.31309843,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "horse",
+          "score": 0.31297624,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "horse",
+          "score": 0.3126375,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "horse",
+          "score": 0.31170893,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "es_004",
+      "query": "caballo",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "horse"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.8,
+      "hit_at_1": 0.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 0.5,
+      "ndcg_at_10": 0.6309297535714575,
+      "embedding_ms": 8.416399941779673,
+      "search_ms": 33.874399960041046,
+      "total_ms": 42.344999965280294,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "camel",
+          "score": 0.31071082,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "horse",
+          "score": 0.30870402,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "horse",
+          "score": 0.30749407,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "horse",
+          "score": 0.30585808,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "horse",
+          "score": 0.30411786,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "horse",
+          "score": 0.30343574,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "horse",
+          "score": 0.30306846,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "horse",
+          "score": 0.30278438,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "unicorn",
+          "score": 0.3024146,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "horse",
+          "score": 0.30225906,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "es_005",
+      "query": "pato",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "duck"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.2,
+      "hit_at_1": 0.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 0.25,
+      "ndcg_at_10": 0.43067655807339306,
+      "embedding_ms": 9.819100028835237,
+      "search_ms": 25.966400047764182,
+      "total_ms": 35.83320009056479,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "goose",
+          "score": 0.33572033,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "goose",
+          "score": 0.33318347,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "goose",
+          "score": 0.32345036,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "duck",
+          "score": 0.3201797,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "goose",
+          "score": 0.3199031,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "goose",
+          "score": 0.31969148,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "goose",
+          "score": 0.3194679,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "duck",
+          "score": 0.31811327,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "goose",
+          "score": 0.31669503,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "duck",
+          "score": 0.31553084,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "es_006",
+      "query": "rana",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "frog"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 11.48809993173927,
+      "search_ms": 38.364000036381185,
+      "total_ms": 49.91639999207109,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "people",
+          "score": 0.27420536,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "people",
+          "score": 0.26651078,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "camel",
+          "score": 0.2664624,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "kangaroo-101",
+          "score": 0.26599059,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "llama-101",
+          "score": 0.26523888,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "faces-easy-101",
+          "score": 0.26521087,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "faces-easy-101",
+          "score": 0.26411262,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "faces-easy-101",
+          "score": 0.26031086,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "dog",
+          "score": 0.2600398,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "faces-easy-101",
+          "score": 0.259516,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_008",
+      "query": "gorila",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "gorilla"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.4,
+      "hit_at_1": 0.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 0.25,
+      "ndcg_at_10": 0.43067655807339306,
+      "embedding_ms": 11.354900081641972,
+      "search_ms": 36.63460002280772,
+      "total_ms": 48.04859997238964,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "chimp",
+          "score": 0.34864295,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "chimp",
+          "score": 0.33107206,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "chimp",
+          "score": 0.32806,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "gorilla",
+          "score": 0.32723624,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "gorilla",
+          "score": 0.3220606,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "gorilla",
+          "score": 0.32162493,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "gorilla",
+          "score": 0.32023466,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "gorilla",
+          "score": 0.31918198,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "gorilla",
+          "score": 0.3190423,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "chimp",
+          "score": 0.31788912,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_009",
+      "query": "pez dorado",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "goldfish"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 32.64600003603846,
+      "search_ms": 18.923899973742664,
+      "total_ms": 51.682100049220026,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "pez-dispenser",
+          "score": 0.34179533,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "pez-dispenser",
+          "score": 0.31955963,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "pez-dispenser",
+          "score": 0.31755203,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "pez-dispenser",
+          "score": 0.3141681,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "pez-dispenser",
+          "score": 0.3071574,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "xylophone",
+          "score": 0.30605882,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "pez-dispenser",
+          "score": 0.29798356,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "mailbox",
+          "score": 0.291391,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "pez-dispenser",
+          "score": 0.29066235,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "pez-dispenser",
+          "score": 0.28792897,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_010",
+      "query": "camello",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "camel"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 39.28349993657321,
+      "search_ms": 40.80529999919236,
+      "total_ms": 80.19249991048127,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "grapes",
+          "score": 0.2664767,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "toad",
+          "score": 0.26635072,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "snail",
+          "score": 0.26368523,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "spaghetti",
+          "score": 0.2581995,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "spaghetti",
+          "score": 0.25722444,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "spaghetti",
+          "score": 0.25684136,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "covered-wagon",
+          "score": 0.25636077,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "mushroom",
+          "score": 0.25433385,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "grapes",
+          "score": 0.25422853,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "spaghetti",
+          "score": 0.25421488,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_019",
+      "query": "uña de guitarra",
+      "language": "es",
+      "category": "object",
+      "query_type": "simple",
+      "relevant_labels": [
+        "guitar-pick"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 12.641699984669685,
+      "search_ms": 37.7944998908788,
+      "total_ms": 50.498399999924004,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "electric-guitar-101",
+          "score": 0.31076866,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "electric-guitar-101",
+          "score": 0.30906367,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "mandolin",
+          "score": 0.30643317,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "electric-guitar-101",
+          "score": 0.30348626,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "mandolin",
+          "score": 0.30259883,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "electric-guitar-101",
+          "score": 0.30160663,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "electric-guitar-101",
+          "score": 0.29787266,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "electric-guitar-101",
+          "score": 0.29682347,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "stirrups",
+          "score": 0.29671454,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "electric-guitar-101",
+          "score": 0.29635856,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_021",
+      "query": "cañon",
+      "language": "es",
+      "category": "object",
+      "query_type": "simple",
+      "relevant_labels": [
+        "cannon"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 17.606399953365326,
+      "search_ms": 32.877299934625626,
+      "total_ms": 50.63880002126098,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "waterfall",
+          "score": 0.28809896,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "clutter",
+          "score": 0.280971,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "radio-telescope",
+          "score": 0.2756302,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "waterfall",
+          "score": 0.2700337,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "clutter",
+          "score": 0.26975292,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "cactus",
+          "score": 0.26937294,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "license-plate",
+          "score": 0.26901644,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "teepee",
+          "score": 0.2667954,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "teepee",
+          "score": 0.2667954,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "ladder",
+          "score": 0.265989,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_026",
+      "query": "avion de combate",
+      "language": "es",
+      "category": "vehicle",
+      "query_type": "simple",
+      "relevant_labels": [
+        "fighter-jet"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 12.775700073689222,
+      "search_ms": 30.599999940022826,
+      "total_ms": 43.46360010094941,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "airplanes-101",
+          "score": 0.31264848,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "airplanes-101",
+          "score": 0.31094927,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "airplanes-101",
+          "score": 0.30589867,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "airplanes-101",
+          "score": 0.30558792,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "airplanes-101",
+          "score": 0.3054391,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "airplanes-101",
+          "score": 0.3036117,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "airplanes-101",
+          "score": 0.30319062,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "airplanes-101",
+          "score": 0.3019504,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "airplanes-101",
+          "score": 0.30124962,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "airplanes-101",
+          "score": 0.30085993,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_030",
+      "query": "arpa",
+      "language": "es",
+      "category": "instrument",
+      "query_type": "simple",
+      "relevant_labels": [
+        "harp"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 19.1945000551641,
+      "search_ms": 34.88409996498376,
+      "total_ms": 54.191599949263036,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "french-horn",
+          "score": 0.29600018,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "french-horn",
+          "score": 0.2756787,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "french-horn",
+          "score": 0.2756769,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "french-horn",
+          "score": 0.27561948,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "french-horn",
+          "score": 0.27408785,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "french-horn",
+          "score": 0.27400982,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "french-horn",
+          "score": 0.27386057,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "french-horn",
+          "score": 0.27369326,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "french-horn",
+          "score": 0.27324754,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "french-horn",
+          "score": 0.27252942,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_031",
+      "query": "perro jugando en la playa con una pelota",
+      "language": "es",
+      "category": "compositional",
+      "query_type": "descriptive",
+      "relevant_labels": [
+        "dog",
+        "greyhound",
+        "golf-ball"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.4,
+      "hit_at_1": 0.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.6666666666666666,
+      "recall_at_10": 0.6666666666666666,
+      "mrr": 0.3333333333333333,
+      "ndcg_at_10": 0.4367467095119258,
+      "embedding_ms": 20.503500010818243,
+      "search_ms": 12.357500032521784,
+      "total_ms": 32.965000020340085,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "fried-egg",
+          "score": 0.3032714,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "mushroom",
+          "score": 0.2912156,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "greyhound",
+          "score": 0.28579712,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "dog",
+          "score": 0.28402185,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "ostrich",
+          "score": 0.26461804,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "dog",
+          "score": 0.26347816,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "dog",
+          "score": 0.25910723,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "llama-101",
+          "score": 0.25485,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "clutter",
+          "score": 0.25055292,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "cormorant",
+          "score": 0.2451016,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "en_035",
+      "query": "musical instrument with strings",
+      "language": "en",
+      "category": "instrument",
+      "query_type": "ambiguous",
+      "relevant_labels": [
+        "harp",
+        "electric-guitar-101"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.8,
+      "hit_at_1": 0.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.5,
+      "mrr": 0.5,
+      "ndcg_at_10": 0.38685280723454163,
+      "embedding_ms": 46.14190000575036,
+      "search_ms": 30.268299975432456,
+      "total_ms": 76.52530004270375,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "xylophone",
+          "score": 0.31479114,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "harp",
+          "score": 0.3144849,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "harp",
+          "score": 0.3101157,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "harp",
+          "score": 0.30980995,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "harp",
+          "score": 0.30948013,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "mandolin",
+          "score": 0.30806947,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "mandolin",
+          "score": 0.30715275,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "harp",
+          "score": 0.30657107,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "harp",
+          "score": 0.30567673,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "mandolin",
+          "score": 0.30436593,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_035",
+      "query": "instrumento musical con cuerdas",
+      "language": "es",
+      "category": "instrument",
+      "query_type": "ambiguous",
+      "relevant_labels": [
+        "harp",
+        "electric-guitar-101"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.2,
+      "hit_at_1": 0.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.5,
+      "mrr": 0.3333333333333333,
+      "ndcg_at_10": 0.3065735963827292,
+      "embedding_ms": 21.456200047396123,
+      "search_ms": 33.1929000094533,
+      "total_ms": 54.75320003461093,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "xylophone",
+          "score": 0.31454617,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "xylophone",
+          "score": 0.31004554,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "harp",
+          "score": 0.30667084,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "rifle",
+          "score": 0.3040901,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "mandolin",
+          "score": 0.3030798,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "xylophone",
+          "score": 0.29537103,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "french-horn",
+          "score": 0.29415816,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "harp",
+          "score": 0.29285896,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "mandolin",
+          "score": 0.2911944,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "harp",
+          "score": 0.2910942,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "es_036",
+      "query": "pastor aleman",
+      "language": "es",
+      "category": "specific",
+      "query_type": "specific",
+      "relevant_labels": [
+        "dog",
+        "greyhound"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 19.50689998921007,
+      "search_ms": 36.83100000489503,
+      "total_ms": 56.47690000478178,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "people",
+          "score": 0.28649598,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "people",
+          "score": 0.2820242,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "people",
+          "score": 0.26608515,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "t-shirt",
+          "score": 0.25863332,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "people",
+          "score": 0.25766742,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "faces-easy-101",
+          "score": 0.2570752,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "faces-easy-101",
+          "score": 0.256019,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "people",
+          "score": 0.25464076,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "faces-easy-101",
+          "score": 0.25341344,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "faces-easy-101",
+          "score": 0.25225347,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_037",
+      "query": "avion militar volando",
+      "language": "es",
+      "category": "vehicle",
+      "query_type": "descriptive",
+      "relevant_labels": [
+        "fighter-jet"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.2,
+      "hit_at_1": 0.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 0.2,
+      "ndcg_at_10": 0.38685280723454163,
+      "embedding_ms": 17.37030001822859,
+      "search_ms": 28.00799999386072,
+      "total_ms": 45.480099972337484,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "airplanes-101",
+          "score": 0.3270572,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "airplanes-101",
+          "score": 0.32545406,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "airplanes-101",
+          "score": 0.31685993,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "airplanes-101",
+          "score": 0.30765265,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "fighter-jet",
+          "score": 0.30708456,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "airplanes-101",
+          "score": 0.30547243,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "airplanes-101",
+          "score": 0.30547172,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "fighter-jet",
+          "score": 0.30378255,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "fighter-jet",
+          "score": 0.30362254,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "airplanes-101",
+          "score": 0.30357987,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_038",
+      "query": "pez dorado pequeño",
+      "language": "es",
+      "category": "animal",
+      "query_type": "descriptive",
+      "relevant_labels": [
+        "goldfish"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 11.613300070166588,
+      "search_ms": 13.107400038279593,
+      "total_ms": 24.78450001217425,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "pez-dispenser",
+          "score": 0.34571016,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "pez-dispenser",
+          "score": 0.3264951,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "pez-dispenser",
+          "score": 0.32467252,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "pez-dispenser",
+          "score": 0.31919995,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "xylophone",
+          "score": 0.30697066,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "pez-dispenser",
+          "score": 0.29819918,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "pez-dispenser",
+          "score": 0.29688293,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "mailbox",
+          "score": 0.29630703,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "pez-dispenser",
+          "score": 0.29579598,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "pez-dispenser",
+          "score": 0.2929265,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "en_039",
+      "query": "large animal with a long neck",
+      "language": "en",
+      "category": "animal",
+      "query_type": "descriptive",
+      "relevant_labels": [
+        "giraffe"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.4,
+      "hit_at_1": 0.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "ndcg_at_10": 0.5,
+      "embedding_ms": 32.080299919471145,
+      "search_ms": 12.953200028277934,
+      "total_ms": 45.10859993752092,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "ostrich",
+          "score": 0.35547972,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "ostrich",
+          "score": 0.34474573,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "giraffe",
+          "score": 0.32785925,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "ostrich",
+          "score": 0.3270585,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "giraffe",
+          "score": 0.32568,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "giraffe",
+          "score": 0.3249753,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "ostrich",
+          "score": 0.32408074,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "giraffe",
+          "score": 0.32358631,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "ostrich",
+          "score": 0.32353267,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "giraffe",
+          "score": 0.31997433,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "es_039",
+      "query": "animal grande con cuello largo",
+      "language": "es",
+      "category": "animal",
+      "query_type": "descriptive",
+      "relevant_labels": [
+        "giraffe"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 16.70850010123104,
+      "search_ms": 17.95560005120933,
+      "total_ms": 34.76710000541061,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "backpack",
+          "score": 0.299699,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "llama-101",
+          "score": 0.2814327,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "wine-bottle",
+          "score": 0.27866012,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "backpack",
+          "score": 0.27820975,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "horse",
+          "score": 0.27780825,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "elephant-101",
+          "score": 0.27761286,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "t-shirt",
+          "score": 0.27698135,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "llama-101",
+          "score": 0.27577808,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "saddle",
+          "score": 0.2728922,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "camel",
+          "score": 0.27261835,
+          "is_relevant": false
+        }
+      ]
+    }
+  ],
+  "best_queries_by_ndcg_at_10": [
+    {
+      "query_id": "en_001",
+      "query": "dog",
+      "language": "en",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "dog",
+        "greyhound"
+      ],
+      "precision_at_1": 1.0,
+      "precision_at_5": 1.0,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 0.5,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_10": 1.0,
+      "embedding_ms": 9.557500015944242,
+      "search_ms": 37.40289993584156,
+      "total_ms": 47.03560005873442,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "dog",
+          "score": 0.30469936,
+          "is_relevant": true
+        },
+        {
+          "position": 2,
+          "label": "greyhound",
+          "score": 0.30113482,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "greyhound",
+          "score": 0.2957624,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "dog",
+          "score": 0.29530114,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "dog",
+          "score": 0.2950454,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "greyhound",
+          "score": 0.29357913,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "dog",
+          "score": 0.29325095,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "dog",
+          "score": 0.29252154,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "goat",
+          "score": 0.292158,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "dog",
+          "score": 0.29164726,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "en_003",
+      "query": "goat",
+      "language": "en",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "goat"
+      ],
+      "precision_at_1": 1.0,
+      "precision_at_5": 1.0,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_10": 1.0,
+      "embedding_ms": 19.959199940785766,
+      "search_ms": 10.99500001873821,
+      "total_ms": 31.013599946163595,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "goat",
+          "score": 0.35088158,
+          "is_relevant": true
+        },
+        {
+          "position": 2,
+          "label": "goat",
+          "score": 0.35071278,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "goat",
+          "score": 0.34968472,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "goat",
+          "score": 0.34560007,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "goat",
+          "score": 0.34404084,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "goat",
+          "score": 0.3413769,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "goat",
+          "score": 0.33937258,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "goat",
+          "score": 0.33665895,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "goat",
+          "score": 0.3354521,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "goat",
+          "score": 0.33493608,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "en_005",
+      "query": "duck",
+      "language": "en",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "duck"
+      ],
+      "precision_at_1": 1.0,
+      "precision_at_5": 1.0,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_10": 1.0,
+      "embedding_ms": 10.335500002838671,
+      "search_ms": 39.59719999693334,
+      "total_ms": 49.9845000449568,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "duck",
+          "score": 0.3464599,
+          "is_relevant": true
+        },
+        {
+          "position": 2,
+          "label": "duck",
+          "score": 0.3388804,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "duck",
+          "score": 0.3378753,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "duck",
+          "score": 0.3377407,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "duck",
+          "score": 0.33547828,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "duck",
+          "score": 0.33412135,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "duck",
+          "score": 0.33351904,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "duck",
+          "score": 0.333026,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "duck",
+          "score": 0.33231425,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "duck",
+          "score": 0.32950777,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "en_006",
+      "query": "frog",
+      "language": "en",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "frog"
+      ],
+      "precision_at_1": 1.0,
+      "precision_at_5": 1.0,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_10": 1.0,
+      "embedding_ms": 7.882499950937927,
+      "search_ms": 23.669500020332634,
+      "total_ms": 31.614899984560907,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "frog",
+          "score": 0.32795218,
+          "is_relevant": true
+        },
+        {
+          "position": 2,
+          "label": "frog",
+          "score": 0.32440105,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "frog",
+          "score": 0.32218394,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "frog",
+          "score": 0.32151732,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "frog",
+          "score": 0.32046068,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "frog",
+          "score": 0.31905925,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "frog",
+          "score": 0.31762707,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "frog",
+          "score": 0.31687766,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "frog",
+          "score": 0.31632236,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "frog",
+          "score": 0.31559658,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "en_007",
+      "query": "giraffe",
+      "language": "en",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "giraffe"
+      ],
+      "precision_at_1": 1.0,
+      "precision_at_5": 1.0,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_10": 1.0,
+      "embedding_ms": 15.081799938343465,
+      "search_ms": 28.256800025701523,
+      "total_ms": 43.39399992022663,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "giraffe",
+          "score": 0.34665567,
+          "is_relevant": true
+        },
+        {
+          "position": 2,
+          "label": "giraffe",
+          "score": 0.33980492,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "giraffe",
+          "score": 0.33970353,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "giraffe",
+          "score": 0.33762598,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "giraffe",
+          "score": 0.33729357,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "giraffe",
+          "score": 0.3370594,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "giraffe",
+          "score": 0.33562344,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "giraffe",
+          "score": 0.33552852,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "giraffe",
+          "score": 0.33548883,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "giraffe",
+          "score": 0.33470425,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "es_007",
+      "query": "jirafa",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "giraffe"
+      ],
+      "precision_at_1": 1.0,
+      "precision_at_5": 1.0,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_10": 1.0,
+      "embedding_ms": 12.586799915879965,
+      "search_ms": 32.1807999862358,
+      "total_ms": 44.81869994197041,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "giraffe",
+          "score": 0.3461463,
+          "is_relevant": true
+        },
+        {
+          "position": 2,
+          "label": "giraffe",
+          "score": 0.3329769,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "giraffe",
+          "score": 0.33163464,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "giraffe",
+          "score": 0.33125073,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "giraffe",
+          "score": 0.3304428,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "giraffe",
+          "score": 0.33035886,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "giraffe",
+          "score": 0.32943434,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "giraffe",
+          "score": 0.32578483,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "giraffe",
+          "score": 0.32497072,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "giraffe",
+          "score": 0.32488638,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "en_008",
+      "query": "gorilla",
+      "language": "en",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "gorilla"
+      ],
+      "precision_at_1": 1.0,
+      "precision_at_5": 1.0,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_10": 1.0,
+      "embedding_ms": 13.438299996778369,
+      "search_ms": 35.55999998934567,
+      "total_ms": 49.065600032918155,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "gorilla",
+          "score": 0.342326,
+          "is_relevant": true
+        },
+        {
+          "position": 2,
+          "label": "gorilla",
+          "score": 0.3419346,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "gorilla",
+          "score": 0.34173983,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "gorilla",
+          "score": 0.3385107,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "gorilla",
+          "score": 0.33399835,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "gorilla",
+          "score": 0.3312732,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "gorilla",
+          "score": 0.33090687,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "gorilla",
+          "score": 0.32974124,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "gorilla",
+          "score": 0.32956812,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "gorilla",
+          "score": 0.32891923,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "en_009",
+      "query": "goldfish",
+      "language": "en",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "goldfish"
+      ],
+      "precision_at_1": 1.0,
+      "precision_at_5": 1.0,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_10": 1.0,
+      "embedding_ms": 10.697899968363345,
+      "search_ms": 32.76900004129857,
+      "total_ms": 43.517100042663515,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "goldfish",
+          "score": 0.33581507,
+          "is_relevant": true
+        },
+        {
+          "position": 2,
+          "label": "goldfish",
+          "score": 0.3356338,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "goldfish",
+          "score": 0.33498478,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "goldfish",
+          "score": 0.33285385,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "goldfish",
+          "score": 0.32973304,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "goldfish",
+          "score": 0.32967153,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "goldfish",
+          "score": 0.32920203,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "goldfish",
+          "score": 0.32844654,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "goldfish",
+          "score": 0.32733375,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "goldfish",
+          "score": 0.3240421,
+          "is_relevant": true
+        }
+      ]
+    },
+    {
+      "query_id": "en_010",
+      "query": "camel",
+      "language": "en",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "camel"
+      ],
+      "precision_at_1": 1.0,
+      "precision_at_5": 1.0,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_10": 1.0,
+      "embedding_ms": 17.567700007930398,
+      "search_ms": 15.100599965080619,
+      "total_ms": 32.717499998398125,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "camel",
+          "score": 0.356846,
+          "is_relevant": true
+        },
+        {
+          "position": 2,
+          "label": "camel",
+          "score": 0.34744138,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "camel",
+          "score": 0.34440112,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "camel",
+          "score": 0.3435682,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "camel",
+          "score": 0.33834773,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "camel",
+          "score": 0.33806247,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "camel",
+          "score": 0.335918,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "camel",
+          "score": 0.33577836,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "camel",
+          "score": 0.3349728,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "llama-101",
+          "score": 0.3346084,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "en_011",
+      "query": "grapes",
+      "language": "en",
+      "category": "food",
+      "query_type": "simple",
+      "relevant_labels": [
+        "grapes"
+      ],
+      "precision_at_1": 1.0,
+      "precision_at_5": 1.0,
+      "hit_at_1": 1.0,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_10": 1.0,
+      "embedding_ms": 27.121199993416667,
+      "search_ms": 52.0562999881804,
+      "total_ms": 79.33850004337728,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "grapes",
+          "score": 0.33199677,
+          "is_relevant": true
+        },
+        {
+          "position": 2,
+          "label": "grapes",
+          "score": 0.33109915,
+          "is_relevant": true
+        },
+        {
+          "position": 3,
+          "label": "grapes",
+          "score": 0.3253557,
+          "is_relevant": true
+        },
+        {
+          "position": 4,
+          "label": "grapes",
+          "score": 0.32307884,
+          "is_relevant": true
+        },
+        {
+          "position": 5,
+          "label": "grapes",
+          "score": 0.3223013,
+          "is_relevant": true
+        },
+        {
+          "position": 6,
+          "label": "grapes",
+          "score": 0.3220117,
+          "is_relevant": true
+        },
+        {
+          "position": 7,
+          "label": "grapes",
+          "score": 0.3204432,
+          "is_relevant": true
+        },
+        {
+          "position": 8,
+          "label": "grapes",
+          "score": 0.32021248,
+          "is_relevant": true
+        },
+        {
+          "position": 9,
+          "label": "grapes",
+          "score": 0.31955957,
+          "is_relevant": true
+        },
+        {
+          "position": 10,
+          "label": "grapes",
+          "score": 0.3184495,
+          "is_relevant": true
+        }
+      ]
+    }
+  ],
+  "worst_queries_by_ndcg_at_10": [
+    {
+      "query_id": "es_003",
+      "query": "cabra",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "goat"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 9.629299980588257,
+      "search_ms": 28.71220000088215,
+      "total_ms": 38.410999928601086,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "horse",
+          "score": 0.29042625,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "horse",
+          "score": 0.28451234,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "greyhound",
+          "score": 0.28408617,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "greyhound",
+          "score": 0.28211024,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "horse",
+          "score": 0.27912974,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "horse",
+          "score": 0.27726465,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "horse",
+          "score": 0.27687484,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "horse",
+          "score": 0.26791793,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "horse",
+          "score": 0.26764247,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "horse",
+          "score": 0.2672922,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_006",
+      "query": "rana",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "frog"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 11.48809993173927,
+      "search_ms": 38.364000036381185,
+      "total_ms": 49.91639999207109,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "people",
+          "score": 0.27420536,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "people",
+          "score": 0.26651078,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "camel",
+          "score": 0.2664624,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "kangaroo-101",
+          "score": 0.26599059,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "llama-101",
+          "score": 0.26523888,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "faces-easy-101",
+          "score": 0.26521087,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "faces-easy-101",
+          "score": 0.26411262,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "faces-easy-101",
+          "score": 0.26031086,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "dog",
+          "score": 0.2600398,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "faces-easy-101",
+          "score": 0.259516,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_009",
+      "query": "pez dorado",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "goldfish"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 32.64600003603846,
+      "search_ms": 18.923899973742664,
+      "total_ms": 51.682100049220026,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "pez-dispenser",
+          "score": 0.34179533,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "pez-dispenser",
+          "score": 0.31955963,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "pez-dispenser",
+          "score": 0.31755203,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "pez-dispenser",
+          "score": 0.3141681,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "pez-dispenser",
+          "score": 0.3071574,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "xylophone",
+          "score": 0.30605882,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "pez-dispenser",
+          "score": 0.29798356,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "mailbox",
+          "score": 0.291391,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "pez-dispenser",
+          "score": 0.29066235,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "pez-dispenser",
+          "score": 0.28792897,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_010",
+      "query": "camello",
+      "language": "es",
+      "category": "animal",
+      "query_type": "simple",
+      "relevant_labels": [
+        "camel"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 39.28349993657321,
+      "search_ms": 40.80529999919236,
+      "total_ms": 80.19249991048127,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "grapes",
+          "score": 0.2664767,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "toad",
+          "score": 0.26635072,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "snail",
+          "score": 0.26368523,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "spaghetti",
+          "score": 0.2581995,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "spaghetti",
+          "score": 0.25722444,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "spaghetti",
+          "score": 0.25684136,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "covered-wagon",
+          "score": 0.25636077,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "mushroom",
+          "score": 0.25433385,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "grapes",
+          "score": 0.25422853,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "spaghetti",
+          "score": 0.25421488,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_019",
+      "query": "uña de guitarra",
+      "language": "es",
+      "category": "object",
+      "query_type": "simple",
+      "relevant_labels": [
+        "guitar-pick"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 12.641699984669685,
+      "search_ms": 37.7944998908788,
+      "total_ms": 50.498399999924004,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "electric-guitar-101",
+          "score": 0.31076866,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "electric-guitar-101",
+          "score": 0.30906367,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "mandolin",
+          "score": 0.30643317,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "electric-guitar-101",
+          "score": 0.30348626,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "mandolin",
+          "score": 0.30259883,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "electric-guitar-101",
+          "score": 0.30160663,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "electric-guitar-101",
+          "score": 0.29787266,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "electric-guitar-101",
+          "score": 0.29682347,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "stirrups",
+          "score": 0.29671454,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "electric-guitar-101",
+          "score": 0.29635856,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_021",
+      "query": "cañon",
+      "language": "es",
+      "category": "object",
+      "query_type": "simple",
+      "relevant_labels": [
+        "cannon"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 17.606399953365326,
+      "search_ms": 32.877299934625626,
+      "total_ms": 50.63880002126098,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "waterfall",
+          "score": 0.28809896,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "clutter",
+          "score": 0.280971,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "radio-telescope",
+          "score": 0.2756302,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "waterfall",
+          "score": 0.2700337,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "clutter",
+          "score": 0.26975292,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "cactus",
+          "score": 0.26937294,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "license-plate",
+          "score": 0.26901644,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "teepee",
+          "score": 0.2667954,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "teepee",
+          "score": 0.2667954,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "ladder",
+          "score": 0.265989,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_026",
+      "query": "avion de combate",
+      "language": "es",
+      "category": "vehicle",
+      "query_type": "simple",
+      "relevant_labels": [
+        "fighter-jet"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 12.775700073689222,
+      "search_ms": 30.599999940022826,
+      "total_ms": 43.46360010094941,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "airplanes-101",
+          "score": 0.31264848,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "airplanes-101",
+          "score": 0.31094927,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "airplanes-101",
+          "score": 0.30589867,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "airplanes-101",
+          "score": 0.30558792,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "airplanes-101",
+          "score": 0.3054391,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "airplanes-101",
+          "score": 0.3036117,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "airplanes-101",
+          "score": 0.30319062,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "airplanes-101",
+          "score": 0.3019504,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "airplanes-101",
+          "score": 0.30124962,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "airplanes-101",
+          "score": 0.30085993,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_030",
+      "query": "arpa",
+      "language": "es",
+      "category": "instrument",
+      "query_type": "simple",
+      "relevant_labels": [
+        "harp"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 19.1945000551641,
+      "search_ms": 34.88409996498376,
+      "total_ms": 54.191599949263036,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "french-horn",
+          "score": 0.29600018,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "french-horn",
+          "score": 0.2756787,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "french-horn",
+          "score": 0.2756769,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "french-horn",
+          "score": 0.27561948,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "french-horn",
+          "score": 0.27408785,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "french-horn",
+          "score": 0.27400982,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "french-horn",
+          "score": 0.27386057,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "french-horn",
+          "score": 0.27369326,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "french-horn",
+          "score": 0.27324754,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "french-horn",
+          "score": 0.27252942,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_036",
+      "query": "pastor aleman",
+      "language": "es",
+      "category": "specific",
+      "query_type": "specific",
+      "relevant_labels": [
+        "dog",
+        "greyhound"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 19.50689998921007,
+      "search_ms": 36.83100000489503,
+      "total_ms": 56.47690000478178,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "people",
+          "score": 0.28649598,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "people",
+          "score": 0.2820242,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "people",
+          "score": 0.26608515,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "t-shirt",
+          "score": 0.25863332,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "people",
+          "score": 0.25766742,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "faces-easy-101",
+          "score": 0.2570752,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "faces-easy-101",
+          "score": 0.256019,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "people",
+          "score": 0.25464076,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "faces-easy-101",
+          "score": 0.25341344,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "faces-easy-101",
+          "score": 0.25225347,
+          "is_relevant": false
+        }
+      ]
+    },
+    {
+      "query_id": "es_038",
+      "query": "pez dorado pequeño",
+      "language": "es",
+      "category": "animal",
+      "query_type": "descriptive",
+      "relevant_labels": [
+        "goldfish"
+      ],
+      "precision_at_1": 0.0,
+      "precision_at_5": 0.0,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_10": 0.0,
+      "embedding_ms": 11.613300070166588,
+      "search_ms": 13.107400038279593,
+      "total_ms": 24.78450001217425,
+      "optimized_query": null,
+      "query_variants": [],
+      "query_aspects": [],
+      "top_results": [
+        {
+          "position": 1,
+          "label": "pez-dispenser",
+          "score": 0.34571016,
+          "is_relevant": false
+        },
+        {
+          "position": 2,
+          "label": "pez-dispenser",
+          "score": 0.3264951,
+          "is_relevant": false
+        },
+        {
+          "position": 3,
+          "label": "pez-dispenser",
+          "score": 0.32467252,
+          "is_relevant": false
+        },
+        {
+          "position": 4,
+          "label": "pez-dispenser",
+          "score": 0.31919995,
+          "is_relevant": false
+        },
+        {
+          "position": 5,
+          "label": "xylophone",
+          "score": 0.30697066,
+          "is_relevant": false
+        },
+        {
+          "position": 6,
+          "label": "pez-dispenser",
+          "score": 0.29819918,
+          "is_relevant": false
+        },
+        {
+          "position": 7,
+          "label": "pez-dispenser",
+          "score": 0.29688293,
+          "is_relevant": false
+        },
+        {
+          "position": 8,
+          "label": "mailbox",
+          "score": 0.29630703,
+          "is_relevant": false
+        },
+        {
+          "position": 9,
+          "label": "pez-dispenser",
+          "score": 0.29579598,
+          "is_relevant": false
+        },
+        {
+          "position": 10,
+          "label": "pez-dispenser",
+          "score": 0.2929265,
+          "is_relevant": false
+        }
+      ]
+    }
+  ]
+}
